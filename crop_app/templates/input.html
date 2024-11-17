@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans:wght@400;500;700;900&family=Plus+Jakarta+Sans:wght@400;500;700;800" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/input.css') }}">
+    <title>Input Parameters</title>
+</head>
+<body>
+    <div class="design-root">
+        <aside class="sidebar">
+            <div class="logo">
+              <img src="{{ url_for('static', filename='images/Agriculture-removebg-preview.png') }}" alt="Logo" class="logo-icon">
+                <span>CropWise</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="/" class="nav-item">Home</a>
+                <a href="/crop-recommend" class="nav-item active">Input Parameters</a>
+            </nav>
+            <div class="new-feature">
+                <div class="feature-card">
+                    <span>New!</span>
+                    <p>Ready to contact real farmers near?</p>
+                </div>
+            </div>
+            <button class="logout"><a href="/logout">Logout →</a></button>
+        </aside>
+        
+        <div class="container">
+            <div class="layout-container">
+              <div class="content">
+                <form action="/crop-predict" method="POST">
+                  <div class="input-container">
+                    <div class="input-header">
+                      <p class="input-title">Input Parameters</p>
+                      <p class="input-description">Please input the following parameters to get crop recommendations</p>
+                    </div>
+                    
+                    <div class="input-fields">
+                      <label class="field" for="nitrogen">
+                        <p class="label">Nitrogen (N)</p>
+                        <input placeholder="0-300" type="number" step="0.0000000001" class="input" id="nitrogen" name="nitrogen" value="" />
+                      </label>
+                      <label class="field" for="potassium">
+                        <p class="label">Potassium (K)</p>
+                        <input placeholder="0-300" type="number" step="0.0000000001" class="input" id="potassium" name="potassium" value="" />
+                      </label>
+                      <label class="field" for="phosphorus">
+                        <p class="label">Phosphorus (P)</p>
+                        <input placeholder="0-300" type="number" step="0.0000000001" class="input" id="phosphorus" name="phosphorus" value="" />
+                      </label>
+                      <label class="field" for="temperature">
+                        <p class="label">Temperature</p>
+                        <input placeholder="0-300" type="number" step="0.0000000001" class="input" id="temperature" name="temperature" value="" />
+                      </label>
+                      <label class="field" for="humidity">
+                        <p class="label">Humidity</p>
+                        <input placeholder="0-300" type="number" step="0.0000000001" class="input" id="humidity" name="humidity" value="" />
+                      </label>
+                      <label class="field" for="ph">
+                        <p class="label">pH</p>
+                        <input placeholder="0-300" type="number" step="0.0000000001" class="input" id="ph" name="ph" value="" />
+                      </label>
+                      <label class="field" for="rainfall">
+                        <p class="label">Rainfall</p>
+                        <input placeholder="0-300" type="number" step="0.0000000001" class="input" id="rainfall" name="rainfall" value="" />
+                      </label>
+                    </div>
+                    <div class="button-container">
+                      <button class="submit-button">
+                        <span class="button-text">Get Crop Recommendations</span>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans:wght@400;500;700;900&family=Plus+Jakarta+Sans:wght@400;500;700;800" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>CropWise</title>
+</head>
+<body>
+    <div class="design-root">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/Agriculture-removebg-preview.png') }}" alt="Logo" class="logo-icon">
+                <span>CropWise</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="/" class="nav-item active">Home</a>
+                <a href="/crop-recommend" class="nav-item">Input Parameters</a>
+            </nav>
+            <div class="new-feature">
+                <div class="feature-card">
+                    <span>New!</span>
+                    <p>Ready to contact real farmers near?</p>
+                </div>
+            </div>
+            <button class="logout"><a href="/logout">Logout →</a></button>
+        </aside>
+        
+        <body class="design-root">
+            <div class="layout-container">
+        
+              <main>
+                <section class="hero">
+                  <div class="hero-image">
+                    <img src="{{ url_for('static', filename='images/sunset-dusk-meadow-field-c04bf29c77d3e1a2c385d1815d27928b.jpg') }}">
+                  </div>
+                  <div class="hero-text">
+                    <div class="header-buttons">
+                      <button class="sign-up-btn"><a href="/register">Sign Up</a></button>
+                      <button class="login-btn"><a href="/login">Login</a></button>
+                    </div>
+                    <h1>Empowering Agriculture for a Sustainable Future</h1>
+                    <h2>Leverage advanced analytics to make informed decisions for your crops.</h2>
+                    <button class="learn-more-btn"><a href="/crop-recommend" class="nav-item">Learn More →</a></button>
+                  </div>
+                </section>
+
+                <section class="our-story">
+                  <h1>Our Story</h1>
+                  <p>
+                      Agriculture is the backbone of our world, providing essential resources and sustaining communities. 
+                      At <span class="highlight">CropWise</span>, we are passionate about supporting farmers and agricultural professionals 
+                      by offering innovative tools, comprehensive resources, and a vibrant community. 
+  
+                  </p>
+              </section>
+        
+                <section class="about">
+                  <h1>About CropWise</h1>
+                  <p>Discover how CropWise can transform your agricultural practices using data-driven insights.</p>
+                  <div class="features">
+                    <div class="feature">
+                      <div class="feature-icon">
+                        <!-- SVG for Graph Icon -->
+                      </div>
+                      <h2>Data-Driven Recommendations</h2>
+                      <p>Get personalized crop suggestions based on soil data and climate conditions.</p>
+                    </div>
+                    <div class="feature">
+                      <div class="feature-icon">
+                        <!-- SVG for Sun Icon -->
+                      </div>
+                      <h2>Real-Time Weather Analysis</h2>
+                      <p>Access up-to-date weather forecasts to plan your farming activities effectively.</p>
+                    </div>
+                    <div class="feature">
+                      <div class="feature-icon">
+                        <!-- SVG for DotOutline Icon -->
+                      </div>
+                      <h2>Easy-to-Use Platform</h2>
+                      <p>Enjoy a user-friendly interface designed for farmers of all tech levels.</p>
+                    </div>
+                  </div>
+                </section>
+              </main>
+        
+            </div>
+          </body>
+    </div>
+</body>
+</html>

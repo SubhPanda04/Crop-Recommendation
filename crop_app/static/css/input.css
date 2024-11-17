@@ -1,0 +1,292 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700;900&family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap');
+
+:root {
+    --primary-color: #1B4332;
+    --secondary-color: #E9FFD3;
+    --accent-green: #90BE6D;
+    --text-color: #333;
+    --border-radius: 16px;
+    --transition: all 0.3s ease;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Plus Jakarta Sans', 'Noto Sans', sans-serif;
+    color: #1C160C;
+    background-color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.design-root {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    width: 170px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.logout a {
+  color: inherit;            /* Inherit the color from the button, or specify a color */
+  text-decoration: none;     /* Remove the underline */
+}
+
+.logout a:hover {
+  color: inherit;            /* Maintain the same color on hover */
+  text-decoration: none;     /* Ensure no underline on hover */
+}
+
+
+.logo-icon {
+    width: 60px;
+    height: 50px;
+    transition: var(--transition);
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.nav-item {
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+.nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-item.active {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.new-feature {
+    margin-top: auto;
+}
+
+.feature-card {
+    background-color: var(--secondary-color);
+    padding: 1.25rem;
+    border-radius: var(--border-radius);
+    color: var(--primary-color);
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.feature-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.feature-card span {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--accent-green);
+}
+
+.feature-card p {
+    margin-top: 0.5rem;
+    font-weight: 500;
+}
+
+.feature-icon {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    width: 60px;
+    height: 60px;
+    opacity: 0.2;
+}
+
+.logout {
+    margin-top: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: var(--transition);
+    padding: 0.5rem;
+    border-radius: var(--border-radius);
+}
+
+.logout:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    font-family: 'Plus Jakarta Sans', 'Noto Sans', sans-serif;
+    background-color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+    
+  .layout-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+    
+  /* Header */
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px;
+    border-bottom: 1px solid #f2f4f0;
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: #141811;
+  }
+  
+  .logo {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .header-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #141811;
+  }
+  
+  .content {
+    padding: 20px 40px;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    margin-left: 350px;
+  }
+  
+  .input-container {
+    max-width: 512px;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .input-header {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 4px;
+  }
+  
+  .input-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #141811;
+  }
+  
+  .input-description {
+    font-family: 'Plus Jakarta Sans', 'Noto Sans', sans-serif;
+    color: #758863;
+    font-size: 20px;
+  }
+  
+  .input-fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 12px;
+  }
+  
+  .field {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 40%;
+  }
+  
+  .label {
+    font-family: 'Plus Jakarta Sans', 'Noto Sans', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #141811;
+    padding-bottom: 8px;
+  }
+  
+  .input {
+    height: 56px;
+    padding: 15px;
+    font-size: 16px;
+    color: #141811;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 12px;
+    outline: none;
+  }
+
+  .input:active{
+    border: 3px solid #90BE6D;
+  }
+  
+  .input:hover{
+    border: 3px solid #90BE6D;
+  }
+
+  .input::placeholder {
+    color: #758863;
+  }
+  
+  .button-container {
+    padding: 12px;
+  }
+  
+  .submit-button {
+    width: 100%;
+    max-width: 480px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #90BE6D;
+    color: #141811;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+  
+  .button-text {
+    text-align: center;
+  }
+  

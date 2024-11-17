@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+    <style>
+        @keyframes ripple {
+            to {
+                transform: translate(-50%, -50%) scale(4);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/Agriculture-removebg-preview.png') }}" alt="Logo" class="logo-icon">
+                <span>CropWise</span>
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="/" class="nav-item">Home</a>
+                <a href="/crop-recommend" class="nav-item">Input Parameters</a>
+            </nav>
+
+            <div class="new-feature">
+                <div class="feature-card">
+                    <span>New!</span>
+                    <p>Ready to contact real farmers near?</p>
+                    <img src="https://placehold.co/60x60" alt="Feature" class="feature-icon">
+                </div>
+            </div>
+
+            <button class="logout"><a href="/logout">Logout →</a></button>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+<h3 class="title">Recommended Crops</h3>
+<div class="grid-container">
+  <div class="crop-card">
+    <div class="image"><img src="{{ url_for('static', filename='images/' + top_crops[0][0].lower() + '.jpg') }}" alt="{{ top_crops[0][0] }} image"></div>
+    <div>
+      <p class="crop-name">{{ top_crops[0][0] | capitalize }}</p>
+    </div>
+  </div>
+  <div class="crop-card">
+    <div class="image"><img src="{{ url_for('static', filename='images/' + top_crops[1][0].lower() + '.jpg') }}" alt="{{ top_crops[1][0] }} image"></div>
+    <div>
+      <p class="crop-name">{{ top_crops[1][0] | capitalize }}</p>
+    </div>
+  </div>
+  <div class="crop-card">
+    <div class="image"><img src="{{ url_for('static', filename='images/' + top_crops[2][0].lower() + '.jpg') }}" alt="{{ top_crops[2][0] }} image"></div>
+    <div>
+      <p class="crop-name">{{ top_crops[2][0] | capitalize }}</p>
+    </div>
+  </div>
+</div>
+
+            </section>
+            <div class="weather-container">
+                <h1>Weather Forecast</h1>
+                <div id="weather-cards" class="weather-cards"></div>
+            </div>
+
+            <div class="dashboard-grid">
+                <section class="analysis-section">
+                    <h3>Predictive analysis</h3>
+                    <canvas id="mlChart" width="300" height="200"></canvas>
+                </section>
+
+                <section class="spraying-section">
+                    <h3>It's the perfect day for spraying</h3>
+                    <div class="metrics">
+                        <img src="{{ url_for('static', filename='images/crop.jpeg') }}" alt="Soil image" class="metric-image">
+                        <div class="metric-container">
+                            <div class="metric">
+                                <span>{{ temperature }}</span>
+                                <p>real-time soil temperature (°C)</p>
+                            </div>
+                            <div class="metric">
+                                <span>{{ ph }}</span>
+                                <p>real-time soil pH</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="environmental-metrics">
+                    <div class="env-metric">
+                        <img src="{{ url_for('static', filename='images/Nitrogen-removebg-preview.png') }}" alt="Air">
+                        <div>
+                            <span>Nitrogen(mg/kg)</span>
+                            <p>{{ nitrogen }}</p>
+                        </div>
+                    </div>
+                    <div class="env-metric">
+                        <img src="{{ url_for('static', filename='images/phosphorus-final.png') }}" alt="Soil">
+                        <div>
+                            <span>Phosphorus(mg/kg)</span>
+                            <p>{{ phosphorus }}</p>
+                        </div>
+                    </div>
+                    <div class="env-metric">
+                        <img src="{{ url_for('static', filename='images/potassium-removebg-preview.png') }}" alt="Land">
+                        <div>
+                            <span>Potassium(mg/kg)</span>
+                            <p>{{ potassium }}</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="environmental-metrics1">
+                    <div class="env-metric1">
+                        <img src="{{ url_for('static', filename='images/humidity-removebg-preview (1).png') }}" alt="Soil">
+                        <div>
+                            <span>Humidity(%)</span>
+                            <p> {{ humidity }}</p>
+                        </div>
+                    </div>
+                    <div class="env-metric1">
+                        <img src="{{ url_for('static', filename='images/Rainfallremovebg-preview.png') }}" alt="Land">
+                        <div>
+                            <span>Rainfall(mm)</span>
+                            <p>{{ rainfall }}</p>
+                        </div>
+                    </div>
+                </section>
+                <div class="environmental-metrics2">
+                    <div class="env-metric2">
+                        <h3>Heatmap</h3>
+                        <img src="{{ url_for('static', filename='images/heatmap-removebg-preview.png') }}" alt="Soil">
+                    </div>
+                </div>
+            </div>
+        </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Public+Sans%3Awght%40400%3B500%3B700%3B900"
+  />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/signup.css') }}">
+</head>
+<body>
+  <div class="design-root">
+    <div class="layout-container">
+      <header class="header">
+        <div class="brand">
+          <div class="logo">
+            <!-- Replacing SVG with PNG logo image -->
+            <img src="{{ url_for('static', filename='images/Agriculture-removebg-preview.png') }}" alt="CropWise Logo" width="48" height="48" />
+          </div>
+          <h2>CropWise</h2>
+        </div>
+      </header>
+      <form action="/register" method="POST">
+        {{ form.hidden_tag() }} 
+          <div class="content">
+            <div class="layout-content-container">
+              <h1>Sign Up</h1>
+              <div class="input-group">
+                <label class="input-label" for="name">
+                  <p>Full Name</p>
+                  <input placeholder="john doe" class="input-field" type="text" id="name" name="name"/>
+                </label>
+              </div>
+              <div class="input-group">
+                <label class="input-label" for="email">
+                  <p>Email or username</p>
+                  <input placeholder="example@gmail.com" class="input-field" type="email" value="" id="email" name="email" />
+                </label>
+              </div>
+              <div class="input-group">
+                <label class="input-label" for="password">
+                  <p>Password</p>
+                  <input placeholder="**********" class="input-field" type="password" id="password" name="password"/>
+                </label>
+              </div>
+              <div class="button-container">
+                <button class="submit-btn" type="submit">
+                  <span>Sign Up</span>
+                </button>
+              </div>
+            </div>
+          </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
