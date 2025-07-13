@@ -48,25 +48,25 @@ Additionally, the site integrates a **Weather API** to display:
 <table>
   <tr>
     <td align="center">
-      <img src="crop_app/Home.png" width="250" style="border:1px solid #ccc; padding:10px;"><br>
+      <img src="demo/Home.png" width="250" style="border:1px solid #ccc; padding:10px;"><br>
       <b>Home Page</b>
     </td>
     <td align="center">
-      <img src="crop_app/Input_Parameter.png" width="250" style="border:1px solid #ccc; padding:10px;"><br>
+      <img src="demo/Input_Parameter.png" width="250" style="border:1px solid #ccc; padding:10px;"><br>
       <b>Input Parameters</b>
     </td>
     <td align="center">
-      <img src="crop_app/Crop_recommendation.png" width="250" style="border:1px solid #ccc; padding:10px;"><br>
+      <img src="demo/Crop_recommendation.png" width="250" style="border:1px solid #ccc; padding:10px;"><br>
       <b>Crop Recommendation</b>
     </td>
   </tr>
   <tr>
     <td align="center">
-      <img src="crop_app/Dashboard.png" width="250" style="border:1px solid #ccc; padding:10px;"><br>
+      <img src="demo/Dashboard.png" width="250" style="border:1px solid #ccc; padding:10px;"><br>
       <b>Dashboard</b>
     </td>
     <td align="center">
-      <img src="crop_app/Accuracy Algo.png" width="250" style="border:1px solid #ccc; padding:10px;"><br>
+      <img src="demo/Accuracy Algo.png" width="250" style="border:1px solid #ccc; padding:10px;"><br>
       <b>Model Accuracy</b>
     </td>
   </tr>
